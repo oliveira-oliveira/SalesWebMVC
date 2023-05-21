@@ -19,9 +19,7 @@ namespace SalesWebMVC.Data
         public void Seed()
         {
             // verificando se há algum registro no banco de dados
-            if (_context.Department.Any() ||
-                _context.SalesRecord.Any() ||
-                _context.Seller.Any())
+            if (_context.Department.Any() || _context.SalesRecord.Any() || _context.Seller.Any())
             {
                 return; // banco de dados populado
             }

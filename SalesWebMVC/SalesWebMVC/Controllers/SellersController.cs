@@ -45,7 +45,7 @@ namespace SalesWebMVC.Controllers
             {
                 var departments = _departmentService.FindAll();
                 var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
-                return View(seller);
+                return View(viewModel);
             }
             _sellerService.Insert(seller);
             return RedirectToAction("Index");
@@ -122,7 +122,7 @@ namespace SalesWebMVC.Controllers
             {
                 var departments = _departmentService.FindAll();
                 var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
-                return View(seller);
+                return View(viewModel);
             }
 
             if (id != seller.Id)
